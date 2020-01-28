@@ -70,7 +70,7 @@ resource "aws_subnet" "app_subnet" {
   cidr_block = "10.0.0.0/24"
   availability_zone = "eu-west-1a"
   tags = {
-    Name = var.name
+    Name = "${var.name} - app"
   }
 
 resource "aws_subnet" "db_subnet" {
@@ -78,6 +78,6 @@ resource "aws_subnet" "db_subnet" {
   cidr_block = "10.0.1.0/24"
   availability_zone = "eu-west-1a"
   tags = {
-    Name = var.name
+    Name = "${var.name} - db"
   }
 }
